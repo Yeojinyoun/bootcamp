@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    사용자 아이디 <input type="text" autofocus />
+    <!-- input 요소에 사용자가 가장먼저 취하는 액션에다가 a
+      utofocus를 취하면 사용자가 더 편하게 사용할수있다. -->
+    <br />
+    비밀번호 <input type="password" />
+    <br />
+    <input type="button" value="저장" />
+    <input type="button" value="조회" />
+    <br />
+    <input type="checkbox" name="" id="chk_html" />
+    <label for="chk_html">html</label>
+    <input type="checkbox" name="" id="chk_css" />
+    <label for="chk_css">css</label>
+    <!-- checkbox에 id를 부여하고 labe for에 checkbox의 id를 넣으면
+      체크박스만 무조건적으로 누르는 것이 아닌 html을 눌러도 체크가 되게 할 수 있다.
+    스크린리더기에 읽혀 라벨>체크박스보다 더 중요하다.-->
+    <br />
+    <label><input type="checkbox" />윤여진</label>
+    <label><input type="checkbox" />이마크</label>
+    <!-- lable안에 input 타입 체크박스를 넣으면 위에 한 것과 같이 
+      윤여진을 눌러도 체크가 되게 한다.
+    chexkbox는 멀티선택을 할 때 쓴다.  -->
+    <br />
+    <input type="radio" name="pl" id="rdo_html" checked />
+    <label for="chk_html">html</label>
+    <input type="radio" name="pl" id="rdo_css" />
+    <label for="rdo_css">css</label>
+    <!--radio는 하나만 선택이 가능함. 중복선택 불가능
+       name을 같이 묶어 줘야한다. why? 그래야 같은 선택 값인걸 인지하기 때문에
+      checked를 사용하면 label로 지정된 것이 선택된채로 화면에 출력된다.
+      id는 중복이 되면x, name은 중복이 가능한.-->
+    <br />
+    <form action="">
+      <input type="email" name="" id="" />
+      <br />
+      <input type="text" name="" id="" required />
+      <br />
+      전화번호
+      <input
+        type="tel"
+        name=""
+        id=""
+        pattern="010-\d{4}-\d{4}"
+        placeholder="하이픈(-) 없이 숫자만 입력하세요."
+      />
+      <input type="text" name="" id="" value="홍길동" disabled />
+      <input type="reset" value="초기화" />
+      <input type="submit" value="저장" />
+    </form>
+    <!--반드시*** form***이란 요소 안에 감싸져있고, 
+    inpit 타입 submit을 통해서 저장을 할 때 input type="email"을 입력함수로 확인한다. 
+    그리고 required(from요소 안에서만 적용이 된다.)로 되어있다면 입력이 되었는지 확인해준다. 
+    disabled는 raedonly와 같이 읽기만 가능한 요소이다. but form요소 안에 들어오면
+    raedonly는 value를 서버로 전송을 하지만 disabled는서버로 전송을 안한다. -->
+    <br />
+    <input
+      type="text"
+      name=""
+      id=""
+      value=""
+      maxlength="8"
+      placeholder="이름"
+    />
+    <br />
+    <input type="color" name="" id="" />
+    <br />
+    <input type="date" name="" id="" />
+    <br />
+    <input type="datetime-local" name="" id="" />
+    <br />
+    <input type="email" src="" alt="" />
+    <br />
+    <input type="file" name="" id="" accept=".pdf" multiple />
+    <!-- accept는 파일을 올릴 때 특정한 파일만 선택할 수 있게 함. 위에선 pdf
+    multiple을 이용하면 여러 파일을 선택할 수 있음   -->
+    <br />
+    <input type="hidden" name="" />
+    <!-- 사용자 눈에는 안보이는 요소
+    프로그래머가 내부에서 쓰기 위해 있는태그 -->
+    <br />
+    <input type="image" src="" alt="" />
+    <!-- 이미지를 누르면 손모양이 버튼의 기능까지 
+      가지고 있다는 것을 알 수 있음 -->
+    <br />
+    <input type="month" name="" id="" />
+    <br />
+    <input type="password" name="" id="" />
+    <!-- 사용자에게 안보여지게 동그라미로 입력이된다.-->
+    <br />
+    <input type="range" name="" id="" min="" max="" />
+    <br />
+    <input type="search" name="" id="" />
+    <!-- text와 비슷하지만 입력값을 한번에 지울수있게 옆에 x표시가 있다. 
+    검색키워드 입력할때 사용-->
+    <br />
+    <input type="time" name="" id="" />
+    <br />
+    <input type="url" name="" id="" />
+    <input type="week" name="" id="" />
+    <!-- 주 단위로 선택할 수 있음 몇째주인지 알수있음-->
+  </body>
+</html>
