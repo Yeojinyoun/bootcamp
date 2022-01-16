@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="/서버주소" mathod="post" target="iframe">
+      <!-- mathod="" get방식과 post방식이 있다.
+        get : 조회 할 때, 링크를 저장할 용도가있고 누구나 한번에 찾아 들어갈수있는 페이지를 볼 때 사용
+        post : 같은 조회지만 누군가 저장해서 보안상 바로 들어오면 안되거나 데이터가 감춰져야 할 때 사용  -->
+      <fieldset>
+        <legend>개인정보</legend>
+        <label for="username">이름</label>
+        <input type="text" name="" id="username" />
+        <br />
+        <label for="tel">연락처</label>
+        <input type="tel" name="" id="tel" />
+      </fieldset>
+      <fieldset>
+        <legend>학력정보</legend>
+        <label for="education">학력</label>
+        <select name="" id="education">
+          <option value="">고졸</option>
+          <option value="">대졸</option>
+          <option value="">대학원졸</option>
+        </select>
+      </fieldset>
+      <input type="submit" value="저장" formnovalidate="formnovalidate" />
+      <!-- formnovalidate="formnovalidate는 
+        정보들이 정확히 입력되었는지 체크를 하지 않고 저장하는 속성이다. -->
+    </form>
+    <iframe src="/서버주소" frameborder="0"></iframe>
+  </body>
+</html>
