@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div
+      style="position: fixed; top: 20px; left: 30px; background-color: yellow"
+    >
+      fixed라고 주면 부모속성에서 스타일이 적용이 되는 것이 아니라
+         전체페이지 기준으로 적용이 된다.
+      하이~~~~~염
+    </div>
+    <br /><br />
+
+    <div
+      style="
+        position: relative;
+        top: 20px;
+        left: 30px;
+        background-color: violet;
+      "
+    >
+      부모속성을 기준으로 top과 left가 적용 된다.
+      Rigkgkggkgkgk
+    </div> -->
+    <div
+      style="
+        position: relative;
+        background-color: yellow;
+        width: 400px;
+        height: 200px;
+      "
+    >
+      123
+      <div
+      style="
+        position: absolute;
+        bottom: 50px;
+        left: 50px;
+        background-color: blue;
+        width: 200px;
+        height: 100px;
+      "
+    >
+    <!-- absolute는 부모속성을 기준으로 한다. 
+      만약 현재 부모속성인 relatve가 없다면 그 위 부모속성인 body속성에 맞춰서 적용된다. -->
+    456</div>
+    abc
+      <span style="cursor: pointer; position: absolute; top: 10px; right: 10px"
+        >X</span
+      >
+  </body>
+</html>
