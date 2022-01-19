@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .striped-table,
+      .normal-table {
+        border: 1px solid black;
+        border-collapse: collapse;
+        /* border-collapse: collapse는 두개가 맞닿아 있는 border가 하나로 병합되서 나타난다.
+        즉, 우리가 알던 표의 모양이 나온다. 반드시 collapse를 적용해야함. */
+        width: 100%;
+      }
+
+      .striped-table th,
+      .striped-table td,
+      .normal-table th,
+      .normal-table td {
+        border: 1px solid black;
+        padding: 5px 10px;
+      }
+      .striped tbody tr:nth-child(odd)
+      /* even, 2n: 짝수
+         odd, 2n+1: 홀수 */ {
+        background-color: gray;
+      }
+      .hover tbody tr:hover {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <table class="striped-table hover striped">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>연락쳐</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유재석</td>
+          <td>010-2222-2222</td>
+          <td>ryu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>윤여진</td>
+          <td>010-3333-2222</td>
+          <td>yyj@gmail.com</td>
+        </tr>
+        <tr>
+          <td>유재석</td>
+          <td>010-2222-2222</td>
+          <td>ryu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>윤여진</td>
+          <td>010-3333-2222</td>
+          <td>yyj@gmail.com</td>
+        </tr>
+        <tr>
+          <td>유재석</td>
+          <td>010-2222-2222</td>
+          <td>ryu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>윤여진</td>
+          <td>010-3333-2222</td>
+          <td>yyj@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br />
+    <table class="normal-table hover">
+      <thead>
+        <tr>
+          <th>이름</th>
+          <th>연락쳐</th>
+          <th>이메일</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>유재석</td>
+          <td>010-2222-2222</td>
+          <td>ryu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>윤여진</td>
+          <td>010-3333-2222</td>
+          <td>yyj@gmail.com</td>
+        </tr>
+        <tr>
+          <td>유재석</td>
+          <td>010-2222-2222</td>
+          <td>ryu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>윤여진</td>
+          <td>010-3333-2222</td>
+          <td>yyj@gmail.com</td>
+        </tr>
+        <tr>
+          <td>유재석</td>
+          <td>010-2222-2222</td>
+          <td>ryu@gmail.com</td>
+        </tr>
+        <tr>
+          <td>윤여진</td>
+          <td>010-3333-2222</td>
+          <td>yyj@gmail.com</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
