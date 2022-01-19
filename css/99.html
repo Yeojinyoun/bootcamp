@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+      }
+      .header {
+        padding: 60px;
+        background-color: mediumturquoise;
+        text-align: center;
+        color: black;
+      }
+      .navbar {
+        display: flex;
+        background-color: cadetblue;
+        color: white;
+        position: sticky;
+        top: 0;
+      }
+      .navbar a {
+        color: white;
+        padding: 14px 20px;
+        text-align: center;
+      }
+      .navbar a:hover {
+        background-color: mediumturquoise;
+        color: black;
+      }
+      .row {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .side {
+        flex: 30%;
+        background-color: #f1f1f1;
+        padding: 20px;
+      }
+      .main {
+        flex: 70%;
+        background-color: white;
+        padding: 30px;
+      }
+      .fakeimg {
+        background-color: #aaa;
+        width: 100%;
+        padding: 20px;
+      }
+      @media screen and (max-width: 900px) {
+        .row,
+        .navbar {
+          flex-direction: column;
+        }
+      }
+      .btn {
+        color: black;
+      }
+      .btn-primary {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Who Am I</h1>
+    </header>
+
+    <nav class="navbar">
+      <a href="">윤여진 1</a>
+      <a href="">윤여진 2</a>
+      <a href="">윤여진 3</a>
+      <a href="">윤여진 4</a>
+      <a href="#project5">윤여진 5</a>
+    </nav>
+
+    <div class="row">
+      <aside class="side">
+        <h2>About</h2>
+        <div class="fakeimg" style="height: 200px">img</div>
+        <p>저는 개발자가 되고 싶은 윤여진입니다.</p>
+        <h3>Skills</h3>
+        <p>html css</p>
+        <div class="fakeimg" style="height: 60px">img</div>
+        <br />
+        <div class="fakeimg" style="height: 60px">img</div>
+        <br />
+        <div class="fakeimg" style="height: 60px">img</div>
+      </aside>
+      <main class="main">
+        <section>
+          <h2>프로젝트 1</h2>
+          <h5>2022 1/18</h5>
+          <div class="fakeimg" style="height: 200px">img</div>
+          <p>
+            이 프로젝트는 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트 2</h2>
+          <h5>2022 1/19</h5>
+          <div class="fakeimg" style="height: 200px">img</div>
+          <p>
+            이 프로젝트는 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트 3</h2>
+          <h5>2022 1/20</h5>
+          <div class="fakeimg" style="height: 200px">img</div>
+          <p>
+            이 프로젝트는 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+        <section>
+          <h2>프로젝트 4</h2>
+          <h5>2022 1/21</h5>
+          <div class="fakeimg" style="height: 200px">img</div>
+          <p>
+            이 프로젝트는 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+        <section id="project5">
+          <h2>프로젝트 5</h2>
+          <h5>2022 1/22</h5>
+          <div class="fakeimg" style="height: 200px">img</div>
+          <p>
+            이 프로젝트는 어떤 기술을 가지고 어떤 것을 해결하기 위해
+            진행되었습니다.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
