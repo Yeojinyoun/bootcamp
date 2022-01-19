@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .dotted {
+        border-style: dotted;
+      }
+      .dashed {
+        border-style: dashed;
+      }
+      .double {
+        border-style: double;
+      }
+      .mix {
+        /* border-style: dotted dashed; 
+        ↑ 순서는 시계방향이다. 상단,우측 ,하단,왼쪽 
+        border-width: 3px, 4px;
+        border-color: red; */
+        border: 3px solid red;
+        border-radius: 15px; /*모서리를 둥그런 모양으로 만든다*/
+      }
+      button {
+        border-radius: 100px;
+        width: 100px;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="dotted">점선</p>
+    <p class="dashed">대시</p>
+    <p class="double">이중선</p>
+    <p class="mix">4개의 면이 다른 선으로 이루어짐</p>
+    <button>저장</button>
+  </body>
+</html>
+<!-- 보더의 굵기와 스타일을 면대로 마음대로 설정할 수 있음. mix -->
