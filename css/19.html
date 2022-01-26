@@ -5,23 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style></style>
+    <style>
+      /* .div-general {
+            width: 1000px;
+        } */
+
+      .div-general div {
+        background-color: yellow;
+        border: 1px solid black;
+      }
+
+      .div-row {
+        display: flex;
+        flex-direction: row;
+        width: 1000px;
+        flex-wrap: nowrap;
+      }
+
+      .div-row div {
+        background-color: blue;
+        border: 1px solid black;
+        width: 300px;
+      }
+
+      .div-column {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .div-column div {
+        background-color: green;
+        border: 1px solid black;
+      }
+    </style>
   </head>
   <body>
-    <div class="div-genral">
-      <div></div>
-      <div></div>
-      <div></div>
+    <div class="div-general">
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
     </div>
     <div class="div-row">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
     </div>
     <div class="div-column">
-      <div></div>
-      <div></div>
-      <div></div>
+      <div>A</div>
+      <div>B</div>
+      <div>C</div>
+      <div>D</div>
+      <div>E</div>
     </div>
   </body>
 </html>
