@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let n1 = 10;
+      let n2 = 30;
+      let sum = n1 + n2;
+      //함수 선언식 -> 최우선으로 해석을 한다.
+      //함수보다 먼저 변수에 함수를 할당해도 함수를 최우선으로 해석하기때문에 오류가나지않는다.
+      function plus(n1, n2) {
+        let sum = n1 + n2;
+        return sum;
+      }
+
+      let sum3 = plus(30, 28);
+      console.log(sum3);
+
+      function add(n1, n2) {
+        return n1 + n2;
+      }
+      function minus(n1, n2) {
+        return n1 - n2;
+      }
+      function multiple(n1, n2) {
+        return n1 * n2;
+      }
+      function divide(n1, n2) {
+        return n1 / n2;
+      }
+
+      let sum4 = add(40, 50);
+      console.log(sum4);
+
+      let div1 = divide(6, 3);
+      console.log(div1);
+
+      //함수표현식 -> 순서가 중요하다. (변수에 할당한것이기때문에)
+      //
+      let add2 = function (n1, n2) {
+        return n1 + n2;
+      };
+      console.log(add2(4, 5));
+
+      //Funcion 생성자함수
+      let add3 = new Function("n1", "n2", "return n1+n2;"); //""사용
+      const operator = "+";
+      let calclator = new Function("n1", "n2", "return n1" + operator + "n2;");
+      console.log(calclator(4, 5));
+
+      //함수를 사용하는 이유
+      //코드의 재활용성
+      //유지보수, 운영이 쉬워진다.
+
+      const tax = 0.1;
+
+      function taxAmount(amont) {
+        //부가세는 현재 10%
+        return amont * tax;
+      }
+      console.log(taxAmount(1000));
+    </script>
+  </body>
+</html>

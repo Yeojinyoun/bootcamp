@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // +,-,*,/,%
+      let x = 1;
+      let y = x;
+      x = x + y;
+      //x=2
+      x = x * y;
+      //% 나머지
+      let z = x % y; //1
+      x = 3;
+      y = 2;
+      x = x ** y; //3^2
+
+      x += y; //x=x+y;와 같은 형식
+      x -= y;
+      //비교연산자
+      x = "4";
+      y = 4;
+      console.log(x == y); //true가 나옴 why? 비교하느 시점에만 x가 숫자 4로 바꿔서 비교해주기때문,
+      console.log(x === y); // false가  나옴 값만 비교하지않고 데이터타입까지 비교를 해줌.더 정확하게 비교해준다.
+      console.log(x != y); // !=는 같지않다는 것을 비교할 때
+      console.log(x >= y); //부등호로 물어보는
+
+      //산술연산자
+      //증가연산자 (++,--)
+      x = 5;
+      y = x++;
+      console.log(y); //5
+      console.log(x); // 6
+
+      x2 = 5; //var로 선언한 것과 같다.
+      y2 = ++x2;
+      console.log(y2); //6
+
+      //감소연산자--
+      x3 = 5;
+      y3 = x3--; //증가연산자와 같다.
+
+      x3 = 5;
+      y3 = -x3; //부호만 바꿔서 나온다.
+
+      //논리연산자(&&,||,!)
+      x = 2;
+      y = 4;
+      z = 2;
+      q = 1;
+      console.log(x > y && x < z && x > q);
+      x = 3;
+      y = 2;
+      z = 5;
+      console.log(x > y || (x > z && x > q));
+      console.log(!true);
+
+      //문자열 연산자
+      let name = "yeojin";
+      let lastName = "doe";
+      name += lastName;
+
+      //조건(삼항)연산자
+      let age = 17;
+      let isAdult = age >= 19 ? "성인" : "미성연자";
+      console.log(isAdult);
+
+      let age = 72;
+      let basicCost = 700;
+      let busCost = age < 8 ? 0 : age > 65 ? 0 : 800;
+
+      //조건문(if,else if, else)
+      //7세이하는 0원
+      //8세이상 13ㅅㅔ이하는 450원
+      //14살이상 18세이하 700원
+      //19세이상 1000원
+      //70세이상 0원
+      let busFare = 0;
+      let age = 12;
+
+      // if (age <= 7) {
+      //   busFare = 0;
+      // } else if (age >= 8 && age <= 13) {
+      //   busFare = 450;
+      // } else if (age >= 14 && age <= 18) {
+      //   busFare = 700;
+      // } else if (age <= 19 && age < 70) {
+      //   busFare = 1000;
+      // } else (age >= 70) {
+      //   busFare = 0;
+      // }
+
+      // 더 가독성있게 쓰는법
+      if (age <= 7) {
+        busFare = 0;
+      } else if (age <= 13) {
+        busFare = 450;
+      } else if (age <= 18) {
+        busFare = 700;
+      } else if (age < 70) {
+        busFare = 1000;
+      } else {
+        busFare = 0;
+      }
+
+      console.log(busFare);
+
+      let isAdult = true;
+
+      if (isAdult) {
+        console.log(isAdult); //true 이니까 실행은 된다.
+      }
+
+      let x;
+      if (x) {
+        //실행이 되지 않는다. undefined이기 때문에
+      }
+      if (nall) {
+        //실행 안됨
+      }
+      x = 0;
+      if (x) {
+        //0도 실행이 되지않는
+      }
+
+      //NaN = not a number
+      if (NaN) {
+        // 실행이 되지않는
+      }
+      let txt = "";
+      if (txt) {
+        //실행되지 않는다.
+      }
+    </script>
+  </body>
+</html>

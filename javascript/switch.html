@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //switch
+      //Date()
+      const d = new Date();
+      const day = d.getDay(); //요일정보를 숫자로 알려준다.
+      console.log(day); //5
+      //0 일,1 월,2 화, 3 수.....
+
+      //   if (day === 0) {
+      //     dayName = "일요일";
+      //   } else if (day === 1) {
+      //     dayName = "월요일";
+      //   } else if (day === 2) {
+      //     dayName = "화요일";
+      //   } else if (day === 3) {
+      //     dayName = "수요일";
+      //   } else if (day === 4) {
+      //     dayName = "목요일";
+      //   } else if (day === 5) {
+      //     dayName = "금요일";
+      //   } else if (day === 6) {
+      //     dayName = "토요일";
+      //   }
+      //if문 위에서 하나한 다 비교를 한 후 만족하는 함수를 만나면 실행이 된다.
+
+      // switch (day) {
+      //   case 0:
+      //     dayName = "일요일";
+      //     break;
+      //   case 1:
+      //     dayName = "월요일";
+      //     break;
+      //   case 2:
+      //     dayName = "화요일";
+      //     break;
+      //   case 3:
+      //     dayName = "수요일";
+      //     break;
+      //   case 4:
+      //     dayName = "목요일";
+      //     break;
+      //   case 5:
+      //     dayName = "금요일";
+      //     break;
+      //   case 6:
+      //     dayName = "토요일";
+      //     break;
+      //   default:
+      //     break;
+      // }
+      //switch문은 조건절을 다 확인하지않고 바로 값에가서 실행을 한다.
+      //switch문은 반드시 비교하는 값이 상수(숫자나 문자)가 있을때실행해야한다.
+
+      const dayNames = {
+        ko: [
+          "일요일",
+          "월요일",
+          "화요일",
+          "수요일",
+          "목요일",
+          "금요일",
+          "토요일",
+        ],
+        en: ["sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+      };
+
+      const userLanguge = "en"; //en
+
+      console.log(dayNames[userLanguge][day]);
+    </script>
+  </body>
+</html>

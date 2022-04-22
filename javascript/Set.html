@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Set, Map 객체
+
+      let foods = [
+        "햄버거",
+        "김치찌개",
+        "된장찌개",
+        "제육볶음",
+        "김치찌개",
+        "햄버거",
+      ];
+      let ofoods = {};
+      // for (const food of foods) {
+      //   ofoods[food] = "";
+      // }
+      //데이터집합체 형체의 데이터구조는 forEach 함수를 가진다
+      foods.forEach(function (food) {
+        ofoods[food] = "";
+      });
+      console.log(ofoods);
+
+      let uniqueFood = [];
+
+      for (const foodName in ofoods) {
+        uniqueFood.push(foodName);
+      }
+      console.log(uniqueFood);
+
+      //set 객체
+      //배열처럼 데이터의 집합
+      //순서가 없음
+      // value 값이 무조건 유일한 값이여야한다.*****
+      //원하는 값이 있는지 없는지 체크할때 set을 쓰는게 효율적이다
+      let foodSet = new Set();
+
+      foodSet.add("햄버거");
+      foodSet.add("김치찌개");
+      foodSet.add("된장찌개");
+      foodSet.add("제육볶음");
+      foodSet.add("김치찌개"); //저장되지않는다
+      foodSet.add("햄버거"); //저장되지않는다
+
+      console.log(foodSet.has("김치찌개")); //값이 있는지없는지 확인하는 내장함수, has
+      console.log(foodSet.delete("김치찌개")); //값을 삭제하는 법
+      // console.log(foodSet.clear()); //모든값을 지우고 싶을때
+      foodSet.forEach(function (food) {
+        console.log(food);
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input
+      type="text"
+      name=""
+      id="userId"
+      value=""
+      onkeyup="checkRequried();"
+    />
+    <br />
+    <select name="" id="city">
+      <option value="02">서울</option>
+      <option value="051">부산</option>
+      <option value="064">제주</option>
+    </select>
+    <select name="" id="si" disabled>
+      <option value="051">제주시</option>
+      <option value="064">서귀포시</option>
+    </select>
+    <button onclick="getInfo();">가져오기</button>
+    <button onclick="setInfo();">설정하기</button>
+    <button onclick="doSave();" disabled>저장하기</button>
+    <!-- disabled는 사용자가 입력한 값이 없으면 눌러지지도 않고 흐릿하게 화면에 출력된다. 
+     -->
+    <script>
+      // 결국은 속성 정보를 제어 하는거 - 정보를 가져오거나, 정보로 설정하는거
+
+      function checkRequried() {
+        if (document.querySelector("#userId").value.length > 0) {
+          document.querySelector("btnSave").disabled = false;
+        } else {
+          document.querySelector("#btnSave").disabled = ture;
+        }
+      }
+
+      function getInfo() {
+        let userId = document.querySelector("#userId").value;
+        // let userId = document.querySelector("#userId").getAttribute("value"); //value는 가져오지못한다...왜? 찾아봐야함,,
+        console.log(userId);
+
+        console.log(document.querySelector("#city").value);
+      }
+
+      function setInfo() {
+        document.querySelector("#userId").setAttribute("value", "jeremy");
+        // document.querySelector("#userId").value = "jeremy";
+      }
+    </script>
+  </body>
+</html>

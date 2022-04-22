@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let brands = ["애플", "구글", "메타", "카카오", "아마존", "네이버"];
+      //for-in -> 배열의 index번호를 가져올수있다.
+      for (const index in brands) {
+        console.log(index);
+      }
+
+      //object for-in
+      let person = {
+        name: "윤여진",
+        age: 23,
+        tel: 010 - 0000 - 0000,
+        inAdult: true,
+        siGunGu: "",
+        grade: [],
+      };
+
+      //눈에 보이지않는 object에 어떤 키와 값을 가지고 있는지 가져오고싶을때 사용
+      for (const key in person) {
+        console.log(key, person[key]);
+      }
+    </script>
+  </body>
+</html>

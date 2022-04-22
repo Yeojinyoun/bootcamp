@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //String 객체의 내장함수
+      //console에서 string.prototype 하면 내장함수들이 쫙나옴...
+      let txt = "javascript";
+
+      //   let obj = {
+      //     fun1: functionn(){
+
+      //     },
+      //     fun2: functionn(){
+
+      //     },
+      //     fun3: functionn(){
+
+      //     },
+      //     length:10;
+      //   };
+
+      //console.log(txt.length);
+      //indexof
+      let str = "welcom yyj!";
+      console.log(str.indexOf("w")); // 0, 문자열에 있는 y는 몇번째 인덱스값을 돌려준다.
+      console.log(str.indexOf("e"));
+
+      let tel = "010-0000-0000";
+      let tel2 = "01000000000";
+      console.log(tel2.indexOf("-"));
+      if (tel2.indexOf("-") === -1) {
+      }
+
+      //lastIndexOf()
+      console.log(str.lastIndexOf("o")); // 9가 찍힌다. 마지막부터 인덱스를 읽는다.
+
+      //slice
+      //substring은 문자열을 자르르지만 slice는 용도면에서 마지막 문자열을 가지고 올때 훨씬 편하다..
+      //왜? 마이너스로 마지막인덱스에 바로 접근 할 수 잇기 때문에
+      //string은 마이너스를 사용할수없음
+      console.log(str.slice(7, 11)); //시작인덱스,마지막인덱스(+1)
+      console.log(str.slice(str.indexOf("yyj!"), 11)); //같다.
+      console.log(str.slice(7)); //시작인덱스만 주면 자동으로 끝까지 출력한다.
+      console.log(str.slice(-4)); //-를 붙이면 뒤에서부터 출력됨
+
+      let numberFormat = "$#,###.##";
+      let numberFormat2 = "#,###";
+      let numberFormat3 = "#.###,##";
+      let percentFormat = "#,###.##%";
+
+      let amount = 31234567;
+      let rat = 34.5;
+      if (percentFormat.slice(-1) === "%") {
+      }
+      console.log(percentFormat.slice(-1));
+
+      //substring()
+      //시작인덱스 종료인덱스(+1) ,종료인덱스 생략불가, 마이너스 사용불가함
+      console.log(str.substring(7, 11));
+
+      //substr()
+      //시작인덱스,길이
+      let date = "20020125";
+      let year = date.slice(0, 4); //date.substring(0,4)
+      let month = date.slice(4, 6); //date.substring(4,6)
+      let day = date.slice(6, 8); //date.substring(6,8)
+
+      year = date.substr(0, 4);
+      month = date.substr(4, 2);
+      day = date.substr(6, 2);
+
+      console.log(year);
+      console.log(month);
+      console.log(day);
+      //문자열 자르는 str은 slice,substring,substr이 있다.
+
+      //replace
+      str = "welcom yyj! yyj";
+      console.log(str.replace("yyj", "Mark")); //welcom Mark! yyj 출력됨
+      // (바꿀문자,바뀔문자) 뒤에있는 yyj는 그대로 출력된다. 처음에 마주한 yyj만 바꿔줌.
+
+      //정규식
+      console.log(str.replace(/yyj/gi, "MArk"));
+
+      // toUpperCase()
+      //대문자로 다 바꿔줌
+      console.log(str.toUpperCase());
+
+      // toLowerCase()
+      //소문자로 다 바꿔줌
+      console.log(str.toLowerCase());
+
+      // concat()
+      //여러문자를 더할때 사용
+      let txt1 = "Hello";
+      let txt2 = "World";
+      let txt3 = txt1 + " " + txt2; //원래는 이런방법으로 더했다...
+      let txt4 = txt1.concat(" ", txt2);
+      console.log(txt4);
+
+      // trim()
+      //앞뒤 공백을 다 없애준다.
+      //데아터를 저장할때나 조회조건을받을떄 사용해야한다.
+      str = "       여진    "; //윤여진, 이여진....
+      console.log(str);
+      console.log(str.trim());
+
+      let name = "윤 여 진";
+      console.log(name.replace(/\s/g, ""));
+
+      //padStart(),padEnd()
+      str = "5"; //4자리로 표기
+      //ex)학번: 년도 2자리+ 학과번호+2자리 +입학순서or이름 가나다순 4자리=8자리
+      //2203 0005
+
+      console.log(str.padStart(4, "0")); //0005출력
+
+      console.log(str.padEnd(4, "0")); //5000출력
+
+      //charAt()
+      //접근제한이 있을때 사용한다.
+      //딱 한글자만 가지고옴.
+      str = "A0001"; //Admin 앞자리만 보고 관리자의 계정을 찾고 싶을때
+      //M
+      // 12
+      console.log(str.charAt(0));
+      //↓ 이렇게도 사용할 수 있음
+      // console.log(str.substring(0, 1));
+      // console.log(str.substr(0, 1));
+      // console.log(str.slice(0, 1));
+
+      //charCodeAt()
+      //유니코드값을 준다.
+      //실뭉서 잘사용하지않는다.
+      console.log(str.charCodeAt(0));
+
+      //solit()*********
+      //진짜 많이씀
+      let tags = "#부트캠트#공부#열심히";
+      let email = "a@naver.com,b@naver.com";
+      let emails = email.split(","); //,를 기준으로 배열을 만들어준다.
+      console.log(emails);
+      console.log(tags.split("#"));
+      //subStrin으로 안나누고 split를 사용하면 더 편리하게 쓸수있다.
+      date = "2022-01-26";
+      dates = date.split("-");
+      year = dates[0];
+      month = dates[1];
+      day = dates[2];
+      console.log(dates);
+
+      //startWith(),endWith()
+      let url = "http://website.com";
+      console.log(url.startsWith("http://"));
+
+      let file = "abc.pdf";
+      console.log(file.endsWith(".pdf"));
+
+      //실무에서 많이 사용하는 것
+      //indexOf(),slice(),replace(),trim(),padStart/End(),startWith()
+    </script>
+  </body>
+</html>

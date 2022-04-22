@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let str = "hello world, world, world";
+      //   let str2 = str.replace("world", "seoul");
+      //   let str2 = str.replace("/world/gi", "seoul");
+      //   console.log(str2);
+
+      const regexp = /world/;
+      const regexp2 = new RegExp("world");
+      console.log(regexp.test(str));
+
+      str = "123abc456def";
+      const regexp3 = /[0-9]{3}/g;
+      let result = str.match(regexp3);
+      console.log(result);
+
+      const regexp4 = /^\d{3}-\d{4}-\d{4}$/;
+      let tel = "010-1111-2222";
+      let tel2 = "01011112222";
+      console.log(regexp4.test(tel));
+
+      let email = "yyj@";
+      // [a-z]+ 소문자가 하나이상
+      // \d* 숫자가 0개 이상
+      // ([a-z]+\d*)+ (소문자 하나이상 숫자 0개 이상) 하나 이상
+      // \.? 점이 한개이거나 없다
+      // [a-z]+
+      // @
+      // [a-z]+
+      // \.[a-z]{2,3}
+      const regexp5 = /^([a-z]+\d*)+(\.?[a-z]+)+@[a-z]+(\.[a-z]{2,3})+$/;
+    </script>
+  </body>
+</html>

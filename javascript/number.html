@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let num = 323; //자동으로 넘버객체가 됨
+      //num.toString() -> 숫자를 string으로 변환해줌
+      //toExponential()-> 지수형으로 바꿔줌.
+
+      //toFixed() -> 소수점 이하 몇자리를 출력한다.
+      let x = 10.258;
+      console.log(x.toFixed(0)); //10
+      console.log(x.toFixed(1)); //10.2
+      console.log(x.toFixed(2)); //10.25
+      console.log(x.toFixed(4)); //10.2580
+
+      //toPrecision -> 소수점 앞 숫자를 포함해서 보여주는
+      console.log(x.toPrecision(2)); // 10
+      console.log(x.toPrecision(3)); //10.2
+
+      //parseInt -> parseInt 안에다가 입력값을 넣어야함.
+      console.log(parseInt("3"));
+      console.log(parseInt("12.5")); //12가 나옴.int로 변환을 한다. 소수점 무조건 버림
+      console.log(parseInt("10 20 30")); //첫번째 10만 출력한다.
+      console.log(parseInt("10 years")); //10만 출력
+
+      //parseFloat
+      console.log(parseFloat("12.34")); //소수점까지 다 출력된다.
+
+      console.log(Number.MAX_VALUE);
+      console.log(Number.MIN_VALUE);
+      console.log(Number.MAX_SAFE_INTEGER);
+      console.log(Number.MIN_SAFE_INTEGER);
+    </script>
+  </body>
+</html>

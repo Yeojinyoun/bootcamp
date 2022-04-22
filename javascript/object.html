@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let person2=new Object();
+      //object는 여러가지 값을 담을수있는데 데이터 각각의 데이터를 할당하는 법은 key:value로 표시한다.
+      //오브젝트 안에 또 다른 오브젝트를 담을 수 있다.
+      let person1 = {
+        name: "윤여진",
+        age: 23,
+        tel: 010 - 0000 - 0000,
+      };
+      let person2 = {
+        name: "이마크",
+        age: 24,
+        tel: 010 - 0000 - 0000,
+      };
+
+      let name1 = person1.name; //person["name"]으로도 선언가능
+      let age1 = person1.age; //person["age"]으로도 선언가능
+      let age1 = person1.age; //person["tel"]으로도 선언가능
+      let tel1 = person1.tel;
+      console.log(name1);
+      console.log(age1);
+      console.log(tel1);
+      person1.addr = "서울 강서구 동 어쩌구"; //이렇게 추가할수있다.
+
+      //   let x = 3;
+      //   let y = 4;
+      //   let x = x * y;
+      //   console.log(z);
+    </script>
+  </body>
+</html>

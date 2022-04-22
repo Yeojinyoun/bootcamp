@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form onsubmit="login();" ; action="">
+      Email: <input type="email" name="" id="" required />
+      <br />
+      PW: <input type="password" name="" id="" required />
+      <br />
+      Tel: <input type="tel" name="" id="" pattern="정규식 넣어" required />
+      <button type="submit">로그인</button>
+    </form>
+    <!-- <form action="">
+        Email: <input type="email" name="" id="" required />
+        <br />
+        PW: <input type="password" name="" id="" required />
+        <br />
+        <button type="submit">로그인</button>
+      </form> -->
+    <!-- <div>
+      Email: <input type="email" name="" id="email" required />
+      <br />
+      PW: <input type="password" name="" id="pw" required />
+      <br />
+      <button onclick="login();">로그인</button>
+    </div> -->
+    <script>
+      function login() {
+        event, preventDefault(); //체크하고 서버로 전송
+        console.log("login 함수실행");
+        //fetch,ajax 서버로 전송
+      }
+    </script>
+  </body>
+</html>
