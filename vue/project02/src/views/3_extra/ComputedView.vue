@@ -20,7 +20,7 @@
 </template>
 <script>
 export default {
-  components: {},
+  components: {}, // 데이터에 없는 새로운 키를 만들수있는 기능과 거기서 참조하고있는 다른 데이터키의 변경사항을 실시간으로 감지&반영
   data() {
     return {
       firstName: 'Seungwon',
@@ -32,6 +32,7 @@ export default {
     }
   },
   computed: {
+    // 데이터에 없는 새로운 키를 만들수 있는 기능과, 여기서 참조하는 다른데이터 키의 변경사항을 실시간으로 감지한다.
     fullName() {
       return this.title + ' ' + this.firstName + ' ' + this.lastName
     },

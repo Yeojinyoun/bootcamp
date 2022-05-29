@@ -1,15 +1,15 @@
 <template>
-  <div v-if="userROle === 'A'">
+  <div v-if="userRole === 'G'">
     <button>조회</button>
-    <button>생성</button>
-    <button>삭제</button>
   </div>
   <div v-else-if="userRole === 'M'">
-    <button>조회</button>
     <button>생성</button>
+    <button>조회</button>
   </div>
   <div v-else>
+    <button>생성</button>
     <button>조회</button>
+    <button>삭제</button>
   </div>
 </template>
 <script>
@@ -17,7 +17,9 @@ export default {
   components: {},
   data() {
     return {
-      userRole: 'A' // A-관리자, M-매니저, G-일반사용자
+      userRole: 'A'
+      // A - 관리자, M - 매니저, G - 일반사용자
+      // 일반사용자가 더 많기에 더 효율적으로 랜더링하기에 G를 위에 써 사용자들이 더 편리하게 사용할 수 있게한다.
     }
   },
   setup() {},

@@ -24,6 +24,7 @@ export default {
 }
 </script>
 <style scoped>
+/* scoped를 하면 이 화면에서만 적용이 된. 안하면 모든파일에 적용  */
 .active {
   background-color: green;
   font-weight: bold;

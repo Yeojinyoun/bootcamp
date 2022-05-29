@@ -1,0 +1,31 @@
+const mysql = require("mysql");
+const sql = require("./sql");
+
+const pool = mysql.createPool({
+  host: process.env.MYSQL_HOST,
+  port: process.env.MYSQL_PORT,
+  user: process.env.MYSQL_USERNAME,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DB,
+  connectionLimit: process.env.MYSQL_LIMIT,
+});
+
+/* 쿼리문을 실행하고 결과를 반환하는 함수 */
+const query = async (alias, values) => {
+  return new Promise((resolve, reject) =>
+    pool.query(sql[alias], values, (error, results) => {
+      if (error) {
+        // 에러가 발생
+        console.log(error);
+        reject({
+          error,
+        });
+      } else resolve(results); // 쿼리 결과를 전달
+    })
+  );
+};
+
+module.exports = {
+  // 다른 자바스크립트에서도 사용할 수 있게 module.exports 하는 것임
+  query,
+};
