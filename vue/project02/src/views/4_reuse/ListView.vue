@@ -113,7 +113,7 @@ export default {
       console.log(this.checkedItems)
       this.$refs.smGrid.sampleData = 'B'
       this.$refs.smGrid.doPrint()
-      // $ refs로 데이터와 함수를 호출할수있다. 
+      //  $ refs로 데이터와 함수를 호출할수있다.
     },
     doExcel() {
       this.$ExcelFromTable(this.headers, this.drinkList, 'drinklist', {})
